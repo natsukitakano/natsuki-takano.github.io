@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* 文字コードの指定 */
+/*  Google Fontsの読み込み
+    Noto Sans JP: 本文用
+	Corben: ページタイトル用　boldでは絶対に使わない
+	Noto Serif JP: 日本語見出し用
+	Klee One: NEXT..用メモ
+ */
+@import url("https://fonts.googleapis.com/css2?family=Corben&family=Klee+One&family=Noto+Serif+JP:wght@200;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #020e3a;
+  background-color: #f4f5ff;
+}
+@media (min-width: 769px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+a {
+  color: #a8a4e0;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.headding-en {
+  font-family: "Corben", cursive;
+  text-transform: uppercase;
+}
+
+.headding-jp {
+  font-family: "Noto Serif JP", serif;
+}
+
+.hand-writing {
+  font-family: "Klee One", cursive;
+}
+
+.footer {
+  width: 100%;
+  height: 2rem;
+  background-color: #020e3a;
+  color: #f4f5ff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

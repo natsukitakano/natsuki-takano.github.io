@@ -1,0 +1,90 @@
+//
+// 共通のスタイル
+//
+
+// ＝＝＝＝＝＝＝＝
+// 変数　色関係
+// ＝＝＝＝＝＝＝＝
+
+// メイン　薄白紺（紺の同系色） #f4f5ff
+$cl_white: #f4f5ff;
+$cl_main: $cl_white;
+
+// アクセント　橙 #fa5700
+$cl_orange: #fa5700;
+$cl_accent: $cl_orange;
+
+// サブ１　紺 #020e3a
+$cl_navy: #020e3a;
+$cl_sub1: $cl_navy;
+
+// サブ２　藍色 #030569
+$cl_indigo: #030569;
+$cl_sub2: $cl_indigo;
+
+// サブ３　薄紫（藍色の同系色） #a8a4e0
+$cl_lightindigo: #a8a4e0;
+$cl_sub3: $cl_lightindigo;
+
+// サブ４　薄紺 #b8cceb
+$cl_lightnavy: #b8cceb;
+$cl_sub4: $cl_lightnavy;
+
+// ＝＝＝＝＝＝＝＝
+// 変数　サイズ関係
+// ＝＝＝＝＝＝＝＝
+
+// スマートフォン最大幅＝ブレークポイント
+$sp_max_width: 768px;
+
+// 横並びにする場合の横マージン
+$horizontal_margin_for_flex_elements: 2rem;
+
+// サイドバー幅
+$pc_width_for_sidebar: 120px;
+
+// カバー用画像のアスペクト比
+//  cover で使用 .. 画面のアスペクト比によって画像の縦幅を切り替える
+//  将来的な写真の入れ替えなどを想定して変数化
+$sp_carousel_image_ratio: '1080/1920';
+$pc_carousel_image_ratio: '2732/1536';
+
+
+// ベーススタイル
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+//    line-height: 1.75;
+    color: $cl_navy;
+    background-color: $cl_white;
+    @media (min-width: 769px) {
+        font-size: 1.6rem;
+    }
+}
+
+a {
+    color: $cl_lightindigo;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.headding-en {
+    font-family: 'Corben', cursive;
+    text-transform: uppercase;
+}
+
+.headding-jp {
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+
