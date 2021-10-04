@@ -12,5 +12,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 769px) {
+        margin-left: $pc_width_for_sidebar;
+        max-width: calc(100% - $pc_width_for_sidebar);
+    }
 }
 

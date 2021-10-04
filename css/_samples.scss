@@ -1,0 +1,64 @@
+//
+// Samples
+//
+
+// TODO: 100vhだと縦が飛び出る。
+
+
+.container-samples {
+    margin: 0 2rem 4rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 769px) {
+        max-width: $pc_width_for_main;
+        margin: 0;
+    }
+}
+
+.sample {
+    margin: 4rem 0;
+    @media (min-width: 769px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.sample__thumnails {
+    @media (min-width: 769px) {
+        width: calc((100% - 2rem) / 2 );
+    }
+    img {
+        border-radius: 10%;
+        border: 1px solid $cl_indigo;
+    }
+}
+.sample__description {
+    @media (min-width: 769px) {
+        width: calc((100% - 2rem) / 2 );
+    }
+}
+.sample__title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 2;
+    border-bottom: $cl-orange 1px solid; // TODO: もっと見やすく
+    @media (min-width: 769px) {
+        font-size: 2.4rem;
+    }
+
+}
+.sample__details {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    list-style: inside '✓ '; // TODO: fontawsome checkマークにしたい。
+    padding: 0;
+    padding-left: 1rem;
+    text-indent: -1rem;
+    margin: 0;
+    @media (min-width: 769px) {
+        font-size: 1.6rem;
+    }
+
+}

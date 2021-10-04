@@ -1,0 +1,72 @@
+//
+// Works
+//
+
+// listの左マージンを改善する。リストマークもスタイリッシュなものにしたい。
+// 
+
+.container-works {
+    margin: 0 2rem 4rem;
+    padding: 0;
+    @media (min-width: 769px) {
+        max-width: $pc_width_for_main;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+// TODO: PC画面高さ揃え
+// TODO: PC画面縦マージン調整
+.work {
+    margin: 4rem 0;
+    @media (min-width: 769px) {
+        width: calc((100% - 2rem) / 2);
+        margin: 2rem 0 2rem;
+    }
+}
+
+.work__category {
+    background-color: $cl_indigo;
+    color: $cl_white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 3rem;
+    position: relative;
+    cursor: pointer;
+
+    @media (min-width: 769px) {
+        font-size: 2.4rem;
+        line-height: 4rem;
+        cursor: unset;
+    }
+
+    &::before {
+        content: '▶';
+//        content: '\f0d8';
+        font-family: "Font Awesome 5 Free";
+        font-size: 1rem;
+        color: $cl_orange;
+        text-align: left;
+        position: absolute;
+        left: 1rem;
+        transform: rotate(90deg);
+        @media (min-width: 769px) {
+            content: '';
+        }
+    }
+}
+// TODO: JavaScriptで表示・非表示を切り替える　開いている場合、三角を下向きにする
+// TODO: 切り替えアイコンを機種依存文字から変更する
+.work__details {
+    display: invisible;
+    list-style: inside '- ';
+    text-indent: -1rem;
+    margin: 0;
+    padding: 1rem 1rem 1rem 2rem;
+    border-left: $cl_indigo solid 1px;
+    border-right: $cl_indigo solid 1px;
+    border-bottom: $cl_indigo solid 1px;
+}

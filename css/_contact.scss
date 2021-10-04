@@ -1,0 +1,136 @@
+//
+// Contact
+//
+
+
+// TODO: プロフィール写真の顔をもう少し上にする？
+// TODO: メニューリンクをJavaScriptで contactを非表示にする
+
+.container-contact {
+    background-image:
+        linear-gradient(rgba($cl_navy, 0.9), rgba($cl_navy, 0.9)),
+        url("../images/cover-image.jpg");
+    background-size: cover;
+    background-position: center;
+
+    color: $cl_white;
+    height: 100vh;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name-card {
+    margin: auto 0 5rem;
+    @media (min-width: 769px) {
+        margin: calc(100vh / 3) 0 auto;
+        background-color: $cl_white;
+        width: 540px;
+        height: 326px;
+        color: $cl_indigo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 10rem 6rem 6rem;
+    }
+}
+
+.catch-phrase {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    width: 100%;
+    @media (min-width: 769px) {
+        margin: 0 0 10px;
+        border-bottom: 1px $cl_navy solid;
+    }
+
+}
+
+.catch-phrase__accent {
+    color: $cl_orange;
+}
+
+.linefeed-for-sp::before {
+    content: "\A";
+    white-space: pre;
+    @media (min-width: 769px) {
+        display: none;
+    }
+}
+
+.profile-photo {
+    margin: 5rem 0;
+    @media (min-width: 769px) {
+        margin: 2rem 0 0;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+.name-block {
+    @media (min-width: 769px) {
+        margin: 2rem 0 0;
+    }
+}
+
+.name__jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 3.6rem;
+    width: 100%;
+    @media (min-width: 769px) {
+        color: $cl_navy;
+    }
+
+}
+.name__en {
+    font-family: 'Corben', cursive;
+    margin-top: 1.6rem;
+    font-size: 2rem;
+    color: $cl_navy;
+}
+.name__email {
+    font-family: 'Corben', cursive;
+    font-size: 1.3rem;
+    display: none;
+    @media (min-width: 769px) {
+        display: block;
+    }
+}
+
+.sns{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 6rem;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 769px) {
+        align-self: flex-end;
+        margin: 0 6rem 6rem 0;
+    }
+
+    li {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.4rem;
+        border-radius: 50%;
+        background-color: $cl_white;
+        margin: 0 2.5rem;
+
+        a {
+            color: $cl_indigo;
+            vertical-align: middle;
+        }
+    }
+}

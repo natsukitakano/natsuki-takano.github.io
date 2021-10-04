@@ -21,15 +21,15 @@
     <div class="wrapper">
         <!-- ヘッダー -->
         <header class="header">
-            <!-- SPナビゲーション -->
-            <nav class="sp-nav">
-                <div class="sp-nav-container">
-                    <ul class="sp-nav-list">
+            <!-- ナビゲーション -->
+            <nav class="nav">
+                <div class="nav-container">
+                    <ul class="nav-list heading-en">
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#works">Works</a></li>
                         <li><a href="#samples">Samples</a></li>
-                        <li><a href="#next">Next..</a></li>
+                        <li><a href="#nexts">Next..</a></li>
                     </ul>
                 </div>
             </nav>
@@ -40,53 +40,150 @@
         <!-- メイン -->
         <main>
             <article class="contact" id="contact">
-                <section>
-                    <div class="container">
-                        <div class="container-inner">
 
+                <!-- Cover 兼 Contact -->
+                <section>
+                    <div class="container-cover">
+                        <div class="container-contact">
+                            <div class="name-card">
+                                <div class="catch-phrase"><span class="catch-phrase__accent">人の思い</span>×<span class="catch-phrase__accent">デジタル</span>×<span class="catch-phrase__accent">アナログ</span>で<span class="linefeed-for-sp"></span> 世の中をもっと良くする</div>
+                                <div class="profile-photo"><img src="./images/profile.jpg" alt="Natsuki Takano"></div>
+                                <div class="name-block">
+                                    <div class="name__jp">高野 夏樹</div>
+                                    <div class="name__en">Natsuki Takano</div>
+                                    <div class="name__email">hello@natsuki-takano.jp</div>
+                                </div>
+                            </div>
+
+                            <ul class="sns">
+                                <li><a href="https://twitter.com/HelloNatsuki" target="_blank"><i class="fab fa-twitter" aria-label="twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/natsukitakano" target="_blank"><i class="fab fa-facebook-f" aria-label="facebook"></i></a></li>
+                                <li><a href="mailto:hello@natsuki-takano.jp" target="_blank"><i class="far fa-envelope" aria-label="email"></i></a></li>
+                              </ul>
+                    
                         </div>
                     </div>
                 </section>
             </article>
+
+            <!-- About -->
             <article class="about" id="about">
-                <h1 class="headding-en">About</h1>
                 <section>
                     <div class="container">
-                        <div class="container-inner">
-
+                        <h1 class="heading-en">About</h1>
+                        <div class="container-about">
+                            <p>埼玉県を拠点とし、課外教育活動を支援するためのWeb・スマホアプリを開発しています。</p>
+                            <p>デジタルなアプリでも、リアル要素で補うアナログさを大事にしたいと思っています。それは人と人とのつながりや体験といった要素です。</p>
+                            <p>約１５年間勤務した非営利団体での経験や知見を活かし、関わる人たちのエネルギーが全てその思いに費やせるよう、使う人達の目線を大事にした使いやすさを追求します。</p>
+                            <p>プログラマとしてはまだ未熟ではありますが、仕事をさせていただきながら腕を磨き、新しい技術を取り入れさせていただきたいと思っています。</p>
+                            <p>このページに掲載しているサンプルで気になること、お手伝いできそうなことがあればぜひお問い合わせください。</p>
                         </div>
                     </div>
                 </section>
             </article>
+
+            <!-- Works -->
             <article class="works" id="works">
-                <h1 class="headding-en">Works</h1>
                 <section>
                     <div class="container">
-                        <div class="container-inner">
-
+                        <h1 class="heading-en">Works</h1>
+                        <div class="container-works">
+                            <div class="work">
+                                <div class="work__category heading-jp" id="work1">ホームページ制作</div>
+                                <ul class="work__details" id="work1__details">
+                                    <li>レスポンシブWebデザイン</li>
+                                    <li>HTML/CSS/JavaScript コーディング</li>
+                                    <li>Wordpressサイト立ち上げ、カスタマイズ</li>
+                                </ul>
+                            </div>
+                            <div class="work">
+                                <div class="work__category heading-jp" id="work2">Webアプリ/スマホアプリ開発</div>
+                                <ul class="work__details" id="work2__details">
+                                    <li>Ruby on Rails + MySQL(またはPostgreSQL)</li>
+                                    <li>Vue.js + Firebase, GCP, 他API連携</li>
+                                </ul>
+                            </div>
+                            <div class="work">
+                                <div class="work__category heading-jp" id="work3">顧客管理・データ分析</div>
+                                <ul class="work__details" id="work3__details">
+                                    <li>Saleforce レポートおよびダッシュボード作成</li>
+                                    <li>Google Data Portal を使ったデータビジュアライゼーション、外部データ連携</li>
+                                    <li>Google Analytics での顧客分析</li>
+                                </ul>
+                            </div>
+                            <div class="work">
+                                <div class="work__category heading-jp" id="work4">業務効率化支援</div>
+                                <ul class="work__details" id="work4__details">
+                                    <li>Google Apps Script コーディング(Document, Spreadsheet, Calendar, Forms等連携 外部API連携も可)</li>
+                                    <li>Slack連携</li>
+                                </ul>
+                            </div>
+                            <div class="work">
+                                <div class="work__category heading-jp" id="work5">英語コミュニケーション支援</div>
+                                <ul class="work__details" id="work5__details">
+                                    <li>英会話、ビジネスメール通信</li>
+                                    <li>国際交流行事企画・コーディネート</li>
+                                    <li>国際会議コーディネート</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
             </article>
+
+            <!-- Samples -->
             <article class="samples" id="samples">
                 <section>
-                    <h1 class="headding-en">Samples</h1>
                     <div class="container">
-                        <div class="container-inner">
+                        <h1 class="heading-en">Samples</h1>
+                        <div class="container-samples">
+                            <div class="sample">
+                                <div class="sample__thumnails">
+                                    <img src="./images/sample1-thumnails.jpg" alt="sample1 団体内用学び共有サイト">
+                                </div>
+                                <div class="sample__description">
+                                    <div class="sample__title heading-jp">団体内用学び共有サイト</div>
+                                    <ul class="sample__details">
+                                        <li>参加者間で学びを共有し、「いいね」で称え合うことができます。これにより、 コミュニケーションを活発化し、学習者が課題を共有しやすい雰囲気を作ります。</li>
+                                        <li>学びの場の開催情報と出欠連絡を簡単に伝えあうことができます。</li>
+                                    </ul>
+                                </div>
+                            </div>
 
+                            <div class="sample">
+                                <div class="sample__thumnails">
+                                    <img src="./images/sample2-thumnails.jpg" alt="sample2 ボランティア募集サイト">
+                                </div>
+                                <div class="sample__description">
+                                    <div class="sample__title heading-jp">ボランティア募集サイト</div>
+                                    <ul class="sample__details">
+                                        <li>欲しい人材ターゲットの記憶に残り、行動を促すサイト設計を行います。</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
             </article>
-            <article class="next" id="next">
-                <section>
-                    <h1 class="headding-en">Next..</h1>
-                    <div class="container">
-                        <div class="container-inner">
-                            <div class="next__itembox">
-                                <div class="next__icon"><i class="fa-regular fa-lightbulb"></i></div>
-                                <div class="next__text hand-writing">小学生向け、観察力を鍛えるスマホゲーム​</div>
 
+            <!-- Next.. -->
+            <article class="nexts" id="nexts">
+                <section>
+                    <div class="container">
+                        <h1 class="heading-en">Next..</h1>
+                        <div class="container-nexts">
+                            <div class="next">
+                                <div class="next__icon"><i class="far fa-lightbulb"></i></div>
+                                <div class="next__text hand-writing">小学生向け、観察力を鍛えるスマホゲーム​</div>
+                            </div>
+                            <div class="next">
+                                <div class="next__icon"><i class="far fa-lightbulb"></i></div>
+                                <div class="next__text hand-writing">
+                                一日一つ人のためになるいいことをして記録するスマホアプリ</div>
+                            </div>
+                            <div class="next">
+                                <div class="next__icon"><i class="far fa-lightbulb"></i></div>
+                                <div class="next__text hand-writing">自分のいるマップ位置に印を残し、友達に同じ場所でその印を探してもらうスマホアプリ</div>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,17 @@
+//
+// About
+//
+
+// TODO: PC画面の時に画面中央に配置したい。
+.container-about {
+    margin: 4rem 2rem 0;
+    padding: 0;
+    @media (min-width: 769px) {
+        margin: 0;
+        max-width: $pc_width_for_main;
+    }
+
+    p {
+        line-height: 2;
+    }
+}
