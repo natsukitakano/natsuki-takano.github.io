@@ -3,7 +3,7 @@
 //
 
 .container-nexts {
-    margin: 4rem 2rem 4rem;
+    margin: 0 2rem 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -31,19 +31,19 @@
 
 
     &:nth-child(3n+1) {
-        background-color: $cl_lightnavy;
+        background-color: var(--color-sub4);
     }
     &:nth-child(3n+2) {
-        background-color: $cl_lightindigo;
+        background-color: var(--color-sub3);
     }
     &:nth-child(3n) {
-        background-color: $cl_white;
+        background-color: var(--color-main);
     }
 }
 
 .next__icon {
     text-align: center;
-    color: $cl_orange;
+    color: var(--color-accent);
     font-size: 1.6rem;
     line-height: 3;
     @media (min-width: 769px) {

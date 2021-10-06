@@ -20,7 +20,7 @@
 
     <div class="wrapper">
         <!-- ヘッダー -->
-        <header class="header">
+        <header class="header" id="navmenu">
             <!-- ナビゲーション -->
             <nav class="nav">
                 <div class="nav-container">
@@ -59,7 +59,9 @@
                                 <li><a href="https://twitter.com/HelloNatsuki" target="_blank"><i class="fab fa-twitter" aria-label="twitter"></i></a></li>
                                 <li><a href="https://www.facebook.com/natsukitakano" target="_blank"><i class="fab fa-facebook-f" aria-label="facebook"></i></a></li>
                                 <li><a href="mailto:hello@natsuki-takano.jp" target="_blank"><i class="far fa-envelope" aria-label="email"></i></a></li>
-                              </ul>
+                            </ul>
+
+                            <div class="scroll-direction"></div>
                     
                         </div>
                     </div>
@@ -70,13 +72,16 @@
             <article class="about" id="about">
                 <section>
                     <div class="container">
-                        <h1 class="heading-en">About</h1>
+                        <div class="heading">
+                            <h1 class="heading-en" data-heading-jp="私のご紹介">About</h1>
+                        </div>
+                        
                         <div class="container-about">
                             <p>埼玉県を拠点とし、課外教育活動を支援するためのWeb・スマホアプリを開発しています。</p>
                             <p>デジタルなアプリでも、リアル要素で補うアナログさを大事にしたいと思っています。それは人と人とのつながりや体験といった要素です。</p>
                             <p>約１５年間勤務した非営利団体での経験や知見を活かし、関わる人たちのエネルギーが全てその思いに費やせるよう、使う人達の目線を大事にした使いやすさを追求します。</p>
                             <p>プログラマとしてはまだ未熟ではありますが、仕事をさせていただきながら腕を磨き、新しい技術を取り入れさせていただきたいと思っています。</p>
-                            <p>このページに掲載しているサンプルで気になること、お手伝いできそうなことがあればぜひお問い合わせください。</p>
+                            <p>このページに掲載しているサンプルで気になられること、私が携われることがあればぜひご連絡ください。</p>
                         </div>
                     </div>
                 </section>
@@ -86,7 +91,9 @@
             <article class="works" id="works">
                 <section>
                     <div class="container">
-                        <h1 class="heading-en">Works</h1>
+                        <div class="heading">
+                            <h1 class="heading-en" data-heading-jp="出来る事">Works</h1>
+                        </div>
                         <div class="container-works">
                             <div class="work">
                                 <div class="work__category heading-jp" id="work1">ホームページ制作</div>
@@ -135,7 +142,9 @@
             <article class="samples" id="samples">
                 <section>
                     <div class="container">
-                        <h1 class="heading-en">Samples</h1>
+                        <div class="heading">
+                            <h1 class="heading-en" data-heading-jp="サンプルアプリ">Samples</h1>
+                        </div>
                         <div class="container-samples">
                             <div class="sample">
                                 <div class="sample__thumnails">
@@ -170,7 +179,9 @@
             <article class="nexts" id="nexts">
                 <section>
                     <div class="container">
-                        <h1 class="heading-en">Next..</h1>
+                        <div class="heading">
+                            <h1 class="heading-en" data-heading-jp="構想中アプリ">Next..</h1>
+                        </div>
                         <div class="container-nexts">
                             <div class="next">
                                 <div class="next__icon"><i class="far fa-lightbulb"></i></div>
@@ -198,9 +209,15 @@
     </div>
 
 
-  <!-- JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- その他のライブラリのJavaScript -->
+    <script src="js/vendor/jquery.waypoints.min.js"></script>
+    <script src="js/vendor/mobile-detect.min.js"></script>
+    
+    <script src="js/main.js"></script>
+  
 
 </body>
 

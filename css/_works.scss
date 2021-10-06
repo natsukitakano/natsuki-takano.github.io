@@ -2,12 +2,12 @@
 // Works
 //
 
-// listの左マージンを改善する。リストマークもスタイリッシュなものにしたい。
-// 
-
 .container-works {
-    margin: 0 2rem 4rem;
+    margin: 0 2rem 0;
     padding: 0;
+    width: calc(100% - 2rem * 2);
+    line-height: 1.2;
+
     @media (min-width: 769px) {
         max-width: $pc_width_for_main;
         margin: 0;
@@ -17,10 +17,11 @@
     }
 }
 
-// TODO: PC画面高さ揃え
-// TODO: PC画面縦マージン調整
 .work {
-    margin: 4rem 0;
+    margin: 2rem 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     @media (min-width: 769px) {
         width: calc((100% - 2rem) / 2);
         margin: 2rem 0 2rem;
@@ -28,8 +29,8 @@
 }
 
 .work__category {
-    background-color: $cl_indigo;
-    color: $cl_white;
+    background-color: var(--color-sub2);
+    color: var(--color-main);
     text-align: center;
     font-size: 1.6rem;
     font-weight: 900;
@@ -43,30 +44,47 @@
         cursor: unset;
     }
 
-    &::before {
-        content: '▶';
-//        content: '\f0d8';
-        font-family: "Font Awesome 5 Free";
-        font-size: 1rem;
-        color: $cl_orange;
-        text-align: left;
-        position: absolute;
-        left: 1rem;
-        transform: rotate(90deg);
-        @media (min-width: 769px) {
+    
+    @media (max-width: 768px) {
+        &::before {
             content: '';
+
+            /* 位置の調整 */
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        
+            /* アニメーションを戻すときの指定 */
+            transition: .3s transform;
+            
+            /* CSSで三角形を作る */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0.4rem 0 0.4rem 0.8rem;
+            border-color: transparent transparent transparent var(--color-accent);
         }
     }
 }
-// TODO: JavaScriptで表示・非表示を切り替える　開いている場合、三角を下向きにする
-// TODO: 切り替えアイコンを機種依存文字から変更する
+
+.is-details-opened::before {
+    transform: rotate(90deg);
+    transition: .3s transform;
+}
+
 .work__details {
-    display: invisible;
+    display: none;
+    flex-grow: 1;
     list-style: inside '- ';
     text-indent: -1rem;
     margin: 0;
     padding: 1rem 1rem 1rem 2rem;
-    border-left: $cl_indigo solid 1px;
-    border-right: $cl_indigo solid 1px;
-    border-bottom: $cl_indigo solid 1px;
+    border-left: var(--color-sub2) solid 1px;
+    border-right: var(--color-sub2) solid 1px;
+    border-bottom: var(--color-sub2) solid 1px;
+    @media (min-width: 769px) {
+        display: block;
+    }
 }

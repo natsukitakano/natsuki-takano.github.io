@@ -3,17 +3,14 @@
 //
 
 
-// TODO: プロフィール写真の顔をもう少し上にする？
-// TODO: メニューリンクをJavaScriptで contactを非表示にする
-
 .container-contact {
     background-image:
-        linear-gradient(rgba($cl_navy, 0.9), rgba($cl_navy, 0.9)),
+        linear-gradient(rgba(var(--rgb-sub1), 0.9), rgba(var(--rgb-sub1), 0.9)),
         url("../images/cover-image.jpg");
     background-size: cover;
     background-position: center;
 
-    color: $cl_white;
+    color: var(--color-main);
     height: 100vh;
 
     text-align: center;
@@ -26,13 +23,13 @@
 }
 
 .name-card {
-    margin: auto 0 5rem;
+    margin: auto 0;
     @media (min-width: 769px) {
         margin: calc(100vh / 3) 0 auto;
-        background-color: $cl_white;
+        background-color: var(--color-main);
         width: 540px;
         height: 326px;
-        color: $cl_indigo;
+        color: var(--color-sub2);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -48,13 +45,13 @@
     width: 100%;
     @media (min-width: 769px) {
         margin: 0 0 10px;
-        border-bottom: 1px $cl_navy solid;
+        border-bottom: 1px var(--color-sub1) solid;
     }
 
 }
 
 .catch-phrase__accent {
-    color: $cl_orange;
+    color: var(--color-accent);
 }
 
 .linefeed-for-sp::before {
@@ -89,7 +86,7 @@
     font-size: 3.6rem;
     width: 100%;
     @media (min-width: 769px) {
-        color: $cl_navy;
+        color: var(--color-sub1);
     }
 
 }
@@ -97,7 +94,9 @@
     font-family: 'Corben', cursive;
     margin-top: 1.6rem;
     font-size: 2rem;
-    color: $cl_navy;
+    @media (min-width: 769px) {
+        color: var(--color-sub1);
+    }
 }
 .name__email {
     font-family: 'Corben', cursive;
@@ -111,12 +110,12 @@
 .sns{
     list-style: none;
     padding: 0;
-    margin: 0 0 6rem;
+    margin: 0 0 8rem;
     display: flex;
     justify-content: center;
     @media (min-width: 769px) {
         align-self: flex-end;
-        margin: 0 6rem 6rem 0;
+        margin: 0 8rem 8rem 0;
     }
 
     li {
@@ -125,11 +124,11 @@
         height: 4rem;
         font-size: 2.4rem;
         border-radius: 50%;
-        background-color: $cl_white;
+        background-color: var(--color-main);
         margin: 0 2.5rem;
 
         a {
-            color: $cl_indigo;
+            color: var(--color-sub2);
             vertical-align: middle;
         }
     }

@@ -17,6 +17,7 @@ $cl_accent: $cl_orange;
 // サブ１　紺 #020e3a
 $cl_navy: #020e3a;
 $cl_sub1: $cl_navy;
+$rgb_sub1: 2, 14, 58;
 
 // サブ２　藍色 #030569
 $cl_indigo: #030569;
@@ -47,12 +48,16 @@ $pc_width_for_sidebar: 120px;
 // 1024px − 左メニュー120px　マージン20px　= 右画面884px
 $pc_width_for_main: 884px;
 
-// カバー用画像のアスペクト比
-//  cover で使用 .. 画面のアスペクト比によって画像の縦幅を切り替える
-//  将来的な写真の入れ替えなどを想定して変数化
-$sp_carousel_image_ratio: '1080/1920';
-$pc_carousel_image_ratio: '2732/1536';
-
+:root {
+    --color-main: #{$cl_main};
+    --color-accent: #{$cl_accent};
+    --color-sub1: #{$cl_sub1};
+    --color-sub2: #{$cl_sub2};
+    --color-sub3: #{$cl_sub3};
+    --color-sub4: #{$cl_sub4};
+    --rgb-sub1: #{$rgb_sub1};
+}
+// : 色のCSS変数を使う
 
 // ベーススタイル
 html {
@@ -64,15 +69,15 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
 //    line-height: 1.75;
-    color: $cl_navy;
-    background-color: $cl_white;
+    color: var(--color-sub1);
+    background-color: var(--color-main);
     @media (min-width: 769px) {
         font-size: 1.6rem;
     }
 }
 
 a {
-    color: $cl_lightindigo;
+    color: var(--color-sub3);
     text-decoration: none;
 }
 
@@ -81,16 +86,34 @@ img {
     vertical-align: bottom;
 }
 
-article h1 { // TODO: マージン微調整をしていない
+article h1 {
     display: block;
-//    text-align: center;
-    border-left: $cl_orange 10px solid;
-    padding-left: 1rem;
-    margin: 0 2rem 0;
+    border-bottom: var(--color-accent) 2px solid;
+    padding: 0 4rem; // 装飾用
+    margin: 0 0 4rem; // 下は各小コンテナとのマージン
+    max-width: $pc_width_for_main;
+
+    position: relative;
 
     @media (min-width: 769px) {
-        margin: 0;
-        max-width: $pc_width_for_main;
+        margin: 0 0 6rem; // 下は各小コンテナとのマージン
+        padding: 0 6rem; // 装飾用
+    }
+
+    &::after {
+        content: attr(data-heading-jp);
+        font-family: 'Noto Serif JP', serif;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1.2rem;
+        font-size: 1.2rem;
+        background-color: var(--color-accent);
+        color: var(--color-main);
+        line-height: 1;
+        text-align: center;
+        margin: 0 4rem; // 装飾用 本体要素の横パディングに合わせると文字幅と同じになる
+       
     }
 
 }
@@ -104,9 +127,9 @@ article h1 { // TODO: マージン微調整をしていない
     font-family: 'Noto Serif JP', serif;
 }
 
-.wrapper {
+// .wrapper {
 
-}
+// }
 
 main {
     @media (min-width: 769px) {
@@ -117,7 +140,8 @@ main {
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 4rem 0 4rem;
 
     display: flex;
     flex-direction: column;
@@ -126,6 +150,6 @@ main {
     justify-content: center;
 
     @media (min-width: 769px) {
-        margin: 0 auto 0;
+        margin: 5rem auto 4rem;
     }
 }
