@@ -57,7 +57,6 @@ $pc_width_for_main: 884px;
     --color-sub4: #{$cl_sub4};
     --rgb-sub1: #{$rgb_sub1};
 }
-// : 色のCSS変数を使う
 
 // ベーススタイル
 html {
@@ -126,10 +125,6 @@ article h1 {
 .heading-jp {
     font-family: 'Noto Serif JP', serif;
 }
-
-// .wrapper {
-
-// }
 
 main {
     @media (min-width: 769px) {
