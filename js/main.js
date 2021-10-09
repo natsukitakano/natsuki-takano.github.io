@@ -17,12 +17,14 @@ $(function(){
     const maxWidthForMobile = 768;
     let isMobileWidth = (width) => (width <= maxWidthForMobile);
 
-    // メニューを元に戻すため、ロード時の位置を覚える
-    // TODO: PC幅で覚えてスクロール途中でSP幅に切り替えられると場所が変わってしまう。
-    let originalPositionOfNavmenu = $(`#navmenu`).position().top;
+    // メニューを元に戻すための位置参照用
+    let originalPositionOfNavmenu = $(`#original-position`);
+
+    // 各articleの位置参照用
+    const articles = $('article');
 
     /**
-     * nav のリンクをクリックしたときに、同じページであることが分かるように、スクロールをする
+     * nav のリンクをクリックしたときジャンプせずに、スクロールをする
      */
     $('.nav-list').on('click', (e) => {
         const destination = $(e.target).attr('href');
@@ -44,7 +46,7 @@ $(function(){
         // 現在の画面上部位置がメニューのオリジナル位置よりも下だったら、
         // 1. リストのpositionをfixedにしてtopを0にする。
         // 2. Contactをメニューに加える
-        if ($(window).scrollTop() > originalPositionOfNavmenu) {
+        if ($(window).scrollTop() > originalPositionOfNavmenu.position().top) {
             if (isMenuAtOriginalPosition) {
                 $('#navmenu').addClass('fixed-navmenu');
                 $('#navmenu li:first-child').show(100);
@@ -67,7 +69,7 @@ $(function(){
     function switchNavlinkColor(){
         let viewingArticleId = "";
         const screenCenter = $(window).scrollTop() + $(window).innerHeight() / 2;
-        $('article').each( function() {
+        articles.each( function() {
             // articleの位置がスクリーン中央よりも上にあったら（座標が小さかったら）
             if ( $(this).position().top < screenCenter ){
                 viewingArticleId = $(this).attr('id');
@@ -87,15 +89,16 @@ $(function(){
     function toggleArrow(){
         if (!isMobileWidth($(window).innerWidth())) return;
 
-        $('article').each( function() {
+        articles.each( function() {
             const isAbove = $(this).position().top < $(window).scrollTop();
             const togglingArrow = $(this).attr('id');
-            const hasClassAbove = $(`#navmenu a[href="#${togglingArrow}"]`).parent('li').hasClass('article-above');
+            const parent_li = $(`#navmenu a[href="#${togglingArrow}"]`).parent('li');
+            const hasClassAbove = parent_li.hasClass('article-above');
             // articleの位置がスクリーン上部よりも上にあったら（座標が小さかったら）
             if ( isAbove && !hasClassAbove ){
-                $(`#navmenu a[href="#${togglingArrow}"]`).parent('li').addClass('article-above');
+                parent_li.addClass('article-above');
             } else if ( !isAbove && hasClassAbove ){
-                $(`#navmenu a[href="#${togglingArrow}"]`).parent('li').removeClass('article-above');
+                parent_li.removeClass('article-above');
             }
         });
     }
@@ -123,7 +126,7 @@ $(function(){
 
         if (isMobile){
             // CSSのmedia切り替え処理が行われているのでnavlinkのオリジナル位置を正す
-            originalPositionOfNavmenu = $(`#navmenu`).position().top;
+//            originalPositionOfNavmenu = $(`#original-position`).position().top;
         }else{
             // SP表示時にスクロール位置によってメニューの色・contact表示を変えているのでPC用に直す
             $('#navmenu').removeClass('fixed-navmenu');

@@ -23,6 +23,8 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -121,6 +123,12 @@ article h1::after {
     background-color: var(--color-accent);
     bottom: 0;
   }
+}
+
+#original-position {
+  width: 0;
+  position: absolute;
+  bottom: 3rem;
 }
 
 .nav-list {

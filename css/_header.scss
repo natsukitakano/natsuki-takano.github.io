@@ -16,7 +16,11 @@
         bottom: 0;
     }
 }
-
+#original-position {
+    width: 0;
+    position: absolute;
+    bottom: 3rem;
+}
 .nav-list {
     list-style: none;
     margin: 0;
