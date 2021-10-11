@@ -6,7 +6,6 @@
 // 将来的に
 // TODO: Vue.js で遊びを入れたい
 // TODO: 右画面にも
-// TODO: 768の境目がWorksおかしい。
 
 $(function(){
 

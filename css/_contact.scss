@@ -20,19 +20,25 @@
     justify-content: center;
     align-items: center;
 
+    @supports (-webkit-touch-callout: none) {
+        height: -webkit-fill-available;
+    }
 }
 
 .name-card {
     margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
     @media (min-width: 769px) {
-        margin: calc(100vh / 3) 0 auto;
+        margin: 33vh 0 auto;
         background-color: var(--color-main);
         width: 540px;
         height: 326px;
         color: var(--color-sub2);
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         box-sizing: border-box;
         padding: 10rem 6rem 6rem;
     }
@@ -63,15 +69,14 @@
 }
 
 .profile-photo {
-    margin: 5rem 0;
     @media (min-width: 769px) {
         margin: 2rem 0 0;
     }
 
     img {
         border-radius: 50%;
-        width: 10rem;
-        height: 10rem;
+        max-width: 10rem;
+        max-height: 10rem;
     }
 }
 
@@ -110,12 +115,14 @@
 .sns{
     list-style: none;
     padding: 0;
-    margin: 0 0 8rem;
+    margin: 0 0 auto;
     display: flex;
-    justify-content: center;
+    width: 60vw;
+    justify-content: space-between;
     @media (min-width: 769px) {
-        align-self: flex-end;
-        margin: 0 8rem 8rem 0;
+        margin: 0 auto auto;
+        width: 540px; // 名刺に合わせる
+        justify-content: flex-end;
     }
 
     li {
@@ -125,8 +132,10 @@
         font-size: 2.4rem;
         border-radius: 50%;
         background-color: var(--color-main);
-        margin: 0 2.5rem;
-
+        margin: 0;
+        @media (min-width: 769px) {
+            margin-left: 2.4rem;
+        }
         a {
             color: var(--color-sub2);
             vertical-align: middle;

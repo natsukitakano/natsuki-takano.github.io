@@ -6,7 +6,8 @@
     width: calc(100vw - 2rem * 2);
     padding: 1rem 2rem 1rem;
     position: absolute;
-    bottom: 0;
+    bottom: 0rem;
+//    top: calc(100vh - 3rem);
     z-index: 100;
     @media (min-width: 769px) {
         position: fixed;
@@ -17,8 +18,9 @@
     }
 }
 #original-position {
-    width: 0;
     position: absolute;
+    left: 0;
+//    top: calc(100vh - 3rem);
     bottom: 3rem;
 }
 .nav-list {

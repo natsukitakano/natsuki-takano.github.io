@@ -64,8 +64,6 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
@@ -76,6 +74,7 @@ body {
         font-size: 1.6rem;
     }
 }
+
 
 a {
     color: var(--color-sub3);
