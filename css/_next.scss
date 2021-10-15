@@ -7,28 +7,35 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    @media (min-width: 769px) {
+    justify-content: space-around;
+    @media (min-width: $pc_min_width) {
         max-width: $pc_width_for_main;
         margin: 0;
     }
 }
 
-.next {
+.next-box {
+    position: relative;
+
     margin: 2rem 0 0;
-    padding: 1.6rem;
 
-    width: calc((100% - 2rem) / 2);
-
+    width: calc($sp_max_width / 3);
     box-sizing: border-box;
 
    /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 1px 1px 3px 0px rgba($cl-navy, 0.5);
 
-    @media (min-width: 769px) {
-        width: calc((100% - 2rem * 3) / 4);
+    @media (min-width: $pc_min_width) {
+        width: calc((#{$pc_min_width}　- #{$horizontal_margin_for_flex_elements} * 3) / 4);
+        margin: #{$horizontal_margin_for_flex_elements};
+
     }
 
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 95%;
+    }
 
     &:nth-child(3n+1) {
         background-color: var(--color-sub4);
@@ -39,6 +46,15 @@
     &:nth-child(3n) {
         background-color: var(--color-main);
     }
+
+}
+
+.next {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+
+    padding: 1.6rem;
+
 }
 
 .next__icon {
@@ -46,7 +62,7 @@
     color: var(--color-accent);
     font-size: 1.6rem;
     line-height: 3;
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         font-size: 3.6rem;
         line-height: 2;
     }
@@ -58,9 +74,9 @@
 }
 
 .next__text {
-    font-size: 1.4rem;
-    @media (min-width: 769px) {
-        font-size: 1.6rem;
+    font-size: 1.6rem;
+    @media (min-width: $pc_min_width) {
+        font-size: 2rem;
         line-height: 1.75;
     }
 }

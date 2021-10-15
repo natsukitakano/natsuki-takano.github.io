@@ -37,6 +37,7 @@ $cl_sub4: $cl_lightnavy;
 
 // スマートフォン最大幅＝ブレークポイント
 $sp_max_width: 768px;
+$pc_min_width: 769px;
 
 // 横並びにする場合の横マージン
 $horizontal_margin_for_flex_elements: 2rem;
@@ -70,7 +71,7 @@ body {
 //    line-height: 1.75;
     color: var(--color-sub1);
     background-color: var(--color-main);
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         font-size: 1.6rem;
     }
 }
@@ -95,7 +96,7 @@ article h1 {
 
     position: relative;
 
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         margin: 0 0 6rem; // 下は各小コンテナとのマージン
         padding: 0 6rem; // 装飾用
     }
@@ -128,7 +129,7 @@ article h1 {
 }
 
 main {
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         margin-left: $pc_width_for_sidebar;
         width: calc(100% - #{$pc_width_for_sidebar});
     }
@@ -145,7 +146,7 @@ main {
     align-content: center;
     justify-content: center;
 
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         margin: 5rem auto 4rem;
     }
 }

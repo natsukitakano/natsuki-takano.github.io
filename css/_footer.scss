@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (min-width: 769px) {
+    @media (min-width: $pc_min_width) {
         margin-left: $pc_width_for_sidebar;
         max-width: calc(100% - $pc_width_for_sidebar);
     }

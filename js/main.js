@@ -7,6 +7,12 @@
 // TODO: Vue.js で遊びを入れたい
 // TODO: 右画面にも
 
+// new Vue({
+//     el: '#works',
+//     data: {
+//     }
+// })
+
 $(function(){
 
     // モバイルブラウザかどうか判定

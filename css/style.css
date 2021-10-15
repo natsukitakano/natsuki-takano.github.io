@@ -528,7 +528,7 @@ a.current-position {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media (min-width: 769px) {
   .container-nexts {
@@ -537,27 +537,42 @@ a.current-position {
   }
 }
 
-.next {
+.next-box {
+  position: relative;
   margin: 2rem 0 0;
-  padding: 1.6rem;
-  width: calc((100% - 2rem) / 2);
+  width: 256px;
   box-sizing: border-box;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 1px 1px 3px 0px rgba(2, 14, 58, 0.5);
 }
 @media (min-width: 769px) {
-  .next {
-    width: calc((100% - 6rem) / 4);
+  .next-box {
+    width: calc((769px　- 2rem * 3) / 4);
+    margin: 2rem;
   }
 }
-.next:nth-child(3n+1) {
+.next-box::before {
+  content: "";
+  display: block;
+  padding-top: 95%;
+}
+.next-box:nth-child(3n+1) {
   background-color: var(--color-sub4);
 }
-.next:nth-child(3n+2) {
+.next-box:nth-child(3n+2) {
   background-color: var(--color-sub3);
 }
-.next:nth-child(3n) {
+.next-box:nth-child(3n) {
   background-color: var(--color-main);
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.6rem;
 }
 
 .next__icon {
@@ -578,11 +593,11 @@ a.current-position {
 }
 
 .next__text {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 769px) {
   .next__text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.75;
   }
 }
