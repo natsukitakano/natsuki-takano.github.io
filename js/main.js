@@ -108,6 +108,21 @@ $(function(){
         });
     }
 
+
+    let isNextShown = [];
+    const nexts = $('.next');
+    function showNexts(){
+        const positionToShow = $(window).scrollTop() + $(window).innerHeight() * 0.7;
+        nexts.each( function( index ) {
+            if (isNextShown[index]) return;
+            // articleの位置がスクリーン中央よりも上にあったら（座標が小さかったら）
+            if ( $(this).position().top < positionToShow ){
+                $(this).removeClass('next--waiting-to-showup');
+                isNextShown[index] = true;
+            }
+        });
+    }
+
     /**
      * ロードとスクロールの監視
      */
@@ -117,6 +132,8 @@ $(function(){
         toggleArrow();
 
         switchNavlinkColor();
+
+        showNexts();
     });
 
     /**

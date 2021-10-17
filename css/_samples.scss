@@ -9,7 +9,7 @@
     flex-direction: column;
     @media (min-width: $pc_min_width) {
         max-width: $pc_width_for_main;
-        margin: 0;
+        margin: 0 $horizontal_margin_for_flex_elements 0;
     }
 }
 

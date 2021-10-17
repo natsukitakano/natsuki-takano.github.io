@@ -51,7 +51,7 @@
 
             /* 位置の調整 */
             position: absolute;
-            left: 1rem;
+            right: 1rem;
             top: 0;
             bottom: 0;
             margin: auto;
@@ -59,17 +59,33 @@
             /* アニメーションを戻すときの指定 */
             transition: .3s transform;
             
-            /* CSSで三角形を作る */
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0.4rem 0 0.4rem 0.8rem;
-            border-color: transparent transparent transparent var(--color-accent);
+            width: 10px;
+            height: 2px;
+            background-color: var(--color-accent);
+
+        }
+        &::after {
+            content: '';
+
+            /* 位置の調整 */
+            position: absolute;
+            right: 1.4rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        
+            /* アニメーションを戻すときの指定 */
+            transition: .3s transform;
+            
+            width: 2px;
+            height: 10px;
+            background-color: var(--color-accent);
+
         }
     }
 }
 
-.is-details-opened::before {
+.is-details-opened::after {
     transform: rotate(90deg);
     transition: .3s transform;
 }

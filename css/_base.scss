@@ -39,7 +39,7 @@ $cl_sub4: $cl_lightnavy;
 $sp_max_width: 768px;
 $pc_min_width: 769px;
 
-// 横並びにする場合の横マージン
+// 横並びにする場合の要素間横マージン
 $horizontal_margin_for_flex_elements: 2rem;
 
 // PC表示サイドバー幅
@@ -72,7 +72,7 @@ body {
     color: var(--color-sub1);
     background-color: var(--color-main);
     @media (min-width: $pc_min_width) {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -102,7 +102,7 @@ article h1 {
     }
 
     &::after {
-        content: attr(data-heading-jp);
+        content: attr(data-serif-jp);
         font-family: 'Noto Serif JP', serif;
         position: absolute;
         left: 0;
@@ -119,12 +119,14 @@ article h1 {
 
 }
 
-.heading-en {
-    font-family: 'Corben', cursive;
+.upper {
     text-transform: uppercase;
 }
 
-.heading-jp {
+.serif-en {
+    font-family: 'Corben', cursive;
+}
+.serif-jp {
     font-family: 'Noto Serif JP', serif;
 }
 

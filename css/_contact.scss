@@ -45,7 +45,6 @@
 }
 
 .catch-phrase {
-    font-family: 'Noto Serif JP', serif;
     font-size: 1.6rem;
     line-height: 1.75;
     width: 100%;
@@ -87,7 +86,6 @@
 }
 
 .name__jp {
-    font-family: 'Noto Sans JP', sans-serif;
     font-size: 3.6rem;
     width: 100%;
     @media (min-width: $pc_min_width) {
@@ -96,7 +94,6 @@
 
 }
 .name__en {
-    font-family: 'Corben', cursive;
     margin-top: 1.6rem;
     font-size: 2rem;
     @media (min-width: $pc_min_width) {
@@ -104,7 +101,6 @@
     }
 }
 .name__email {
-    font-family: 'Corben', cursive;
     font-size: 1.3rem;
     display: none;
     @media (min-width: $pc_min_width) {

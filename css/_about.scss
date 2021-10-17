@@ -6,7 +6,7 @@
     margin: 0 2rem 0;
     padding: 0;
     @media (min-width: $pc_min_width) {
-        margin: 0;
+        margin: 0 $horizontal_margin_for_flex_elements 0;
         max-width: $pc_width_for_main;
     }
 

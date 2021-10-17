@@ -31,7 +31,7 @@ body {
 }
 @media (min-width: 769px) {
   body {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -60,7 +60,7 @@ article h1 {
   }
 }
 article h1::after {
-  content: attr(data-heading-jp);
+  content: attr(data-serif-jp);
   font-family: "Noto Serif JP", serif;
   position: absolute;
   left: 0;
@@ -74,12 +74,15 @@ article h1::after {
   margin: 0 4rem;
 }
 
-.heading-en {
-  font-family: "Corben", cursive;
+.upper {
   text-transform: uppercase;
 }
 
-.heading-jp {
+.serif-en {
+  font-family: "Corben", cursive;
+}
+
+.serif-jp {
   font-family: "Noto Serif JP", serif;
 }
 
@@ -244,7 +247,6 @@ a.current-position {
 }
 
 .catch-phrase {
-  font-family: "Noto Serif JP", serif;
   font-size: 1.6rem;
   line-height: 1.75;
   width: 100%;
@@ -288,7 +290,6 @@ a.current-position {
 }
 
 .name__jp {
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 3.6rem;
   width: 100%;
 }
@@ -299,7 +300,6 @@ a.current-position {
 }
 
 .name__en {
-  font-family: "Corben", cursive;
   margin-top: 1.6rem;
   font-size: 2rem;
 }
@@ -310,7 +310,6 @@ a.current-position {
 }
 
 .name__email {
-  font-family: "Corben", cursive;
   font-size: 1.3rem;
   display: none;
 }
@@ -360,7 +359,7 @@ a.current-position {
 }
 @media (min-width: 769px) {
   .container-about {
-    margin: 0;
+    margin: 0 2rem 0;
     max-width: 884px;
   }
 }
@@ -419,22 +418,33 @@ a.current-position {
     content: "";
     /* 位置の調整 */
     position: absolute;
-    left: 1rem;
+    right: 1rem;
     top: 0;
     bottom: 0;
     margin: auto;
     /* アニメーションを戻すときの指定 */
     transition: 0.3s transform;
-    /* CSSで三角形を作る */
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0.4rem 0 0.4rem 0.8rem;
-    border-color: transparent transparent transparent var(--color-accent);
+    width: 10px;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+  .work__category::after {
+    content: "";
+    /* 位置の調整 */
+    position: absolute;
+    right: 1.4rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* アニメーションを戻すときの指定 */
+    transition: 0.3s transform;
+    width: 2px;
+    height: 10px;
+    background-color: var(--color-accent);
   }
 }
 
-.is-details-opened::before {
+.is-details-opened::after {
   transform: rotate(90deg);
   transition: 0.3s transform;
 }
@@ -465,7 +475,7 @@ a.current-position {
 @media (min-width: 769px) {
   .container-samples {
     max-width: 884px;
-    margin: 0;
+    margin: 0 2rem 0;
   }
 }
 
@@ -537,36 +547,43 @@ a.current-position {
   }
 }
 
-.next-box {
+.next {
   position: relative;
   margin: 2rem 0 0;
-  width: 256px;
+  width: 20rem;
   box-sizing: border-box;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 1px 1px 3px 0px rgba(2, 14, 58, 0.5);
+  opacity: 1;
+  transition: 0.5s opacity, 0.5s transform;
 }
 @media (min-width: 769px) {
-  .next-box {
-    width: calc((769px　- 2rem * 3) / 4);
+  .next {
+    width: 25rem;
     margin: 2rem;
   }
 }
-.next-box::before {
+.next::before {
   content: "";
   display: block;
   padding-top: 95%;
 }
-.next-box:nth-child(3n+1) {
+.next:nth-child(3n+1) {
   background-color: var(--color-sub4);
 }
-.next-box:nth-child(3n+2) {
+.next:nth-child(3n+2) {
   background-color: var(--color-sub3);
 }
-.next-box:nth-child(3n) {
+.next:nth-child(3n) {
   background-color: var(--color-main);
 }
 
-.next {
+.next--waiting-to-showup {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.next__inner {
   position: absolute;
   top: 0;
   right: 0;
@@ -578,7 +595,7 @@ a.current-position {
 .next__icon {
   text-align: center;
   color: var(--color-accent);
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   line-height: 3;
 }
 @media (min-width: 769px) {

@@ -2,6 +2,9 @@
 // Next..
 //
 
+$sp_next_width: 20rem;
+$pc_next_width: 25rem;
+
 .container-nexts {
     margin: 0 2rem 0;
     padding: 0;
@@ -14,19 +17,22 @@
     }
 }
 
-.next-box {
+.next {
     position: relative;
 
     margin: 2rem 0 0;
 
-    width: calc($sp_max_width / 3);
+    width: $sp_next_width;
     box-sizing: border-box;
 
    /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 1px 1px 3px 0px rgba($cl-navy, 0.5);
 
+    opacity: 1;
+    transition: .5s opacity, .5s transform;
+
     @media (min-width: $pc_min_width) {
-        width: calc((#{$pc_min_width}　- #{$horizontal_margin_for_flex_elements} * 3) / 4);
+        width: $pc_next_width;
         margin: #{$horizontal_margin_for_flex_elements};
 
     }
@@ -48,19 +54,22 @@
     }
 
 }
+.next--waiting-to-showup {
+    opacity: 0;
+    transform: scale(1.2);
+}
 
-.next {
+.next__inner {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
 
     padding: 1.6rem;
-
 }
 
 .next__icon {
     text-align: center;
     color: var(--color-accent);
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     line-height: 3;
     @media (min-width: $pc_min_width) {
         font-size: 3.6rem;
