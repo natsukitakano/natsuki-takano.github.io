@@ -61,22 +61,27 @@
             transform: rotate(315deg);
             transition: border .1s;
         }
-    }
-
-    li:first-child {
-        display: none;
-        @media (min-width: $pc_min_width) {
-            display: block;
+        .li-contact {
+            margin-left: -100px;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
         }
     }
 }
 
+// FIXME: PC画面のリンクの色の変化がおかしい
 
 .fixed-navmenu {
     position: fixed;
     top: 0;
     bottom: unset;
     background-color: var(--color-sub1);
+
+    .li-contact {
+        margin-left: unset;
+        transition: all 0.2s ease-in-out;
+}
+
 }
 
 li.article-above::before {
@@ -87,7 +92,6 @@ li.article-above::before {
     transition: border .1s;
     bottom: -0.5rem;
 }
-
 
 a.current-position {
     color: var(--color-accent);
