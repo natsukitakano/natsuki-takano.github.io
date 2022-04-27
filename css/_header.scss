@@ -1,3 +1,4 @@
+@use "variables";
 //
 // Header & Navlist
 //
@@ -8,10 +9,10 @@
     position: absolute;
     bottom: 0rem;
     z-index: 100;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         position: fixed;
         padding: 0;
-        width: $pc_width_for_sidebar;
+        width: variables.$pc_width_for_sidebar;
         background-color: var(--color-accent);
         bottom: 0;
     }
@@ -28,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         flex-direction: column;
         font-size: 1.6rem;
         height: 100vh;
@@ -95,7 +96,7 @@ li.article-above::before {
 
 a.current-position {
     color: var(--color-accent);
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         color: var(--color-sub2);
     }
 }

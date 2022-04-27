@@ -1,0 +1,54 @@
+//
+// 共通のスタイル
+//
+
+// ＝＝＝＝＝＝＝＝
+// 変数　色関係
+// ＝＝＝＝＝＝＝＝
+
+// メイン　薄白紺（紺の同系色） #f4f5ff
+$cl_white: #f4f5ff;
+$cl_main: $cl_white;
+
+// アクセント　橙 #fa5700
+$cl_orange: #fa5700;
+$cl_accent: $cl_orange;
+
+// サブ１　紺 #020e3a
+$cl_navy: #020e3a;
+$cl_sub1: $cl_navy;
+$rgb_sub1: 2, 14, 58;
+
+// サブ２　藍色 #030569
+$cl_indigo: #030569;
+$cl_sub2: $cl_indigo;
+
+// サブ３　薄紫（藍色の同系色） #a8a4e0
+$cl_lightindigo: #a8a4e0;
+$cl_sub3: $cl_lightindigo;
+
+// サブ４　薄紺 #b8cceb
+$cl_lightnavy: #b8cceb;
+$cl_sub4: $cl_lightnavy;
+
+// ＝＝＝＝＝＝＝＝
+// 変数　サイズ関係
+// ＝＝＝＝＝＝＝＝
+
+// スマートフォン最大幅＝ブレークポイント
+$sp_max_width: 768px;
+$pc_min_width: 769px;
+
+// 横並びにする場合の要素間横マージン
+$horizontal_margin_for_flex_elements: 2rem;
+
+// PC表示サイドバー幅
+$pc_width_for_sidebar: 120px;
+
+// PC表示メインエリア幅
+// 1024px − 左メニュー120px　マージン20px　= 右画面884px
+$pc_width_for_main: 884px;
+
+// next 
+$sp_next_width: 20rem;
+$pc_next_width: 25rem;

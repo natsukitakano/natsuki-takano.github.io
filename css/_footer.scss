@@ -1,3 +1,4 @@
+@use "variables";
 //
 // footer
 //
@@ -13,9 +14,9 @@
     align-items: center;
     justify-content: center;
 
-    @media (min-width: $pc_min_width) {
-        margin-left: $pc_width_for_sidebar;
-        max-width: calc(100% - $pc_width_for_sidebar);
+    @media (min-width: variables.$pc_min_width) {
+        margin-left: variables.$pc_width_for_sidebar;
+        max-width: calc(100% - variables.$pc_width_for_sidebar);
     }
 }
 

@@ -1,0 +1,108 @@
+@use "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Corben&family=Klee+One&family=Noto+Serif+JP:wght@200;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --color-main: #{variables.$cl_main};
+  --color-accent: #{variables.$cl_accent};
+  --color-sub1: #{variables.$cl_sub1};
+  --color-sub2: #{variables.$cl_sub2};
+  --color-sub3: #{variables.$cl_sub3};
+  --color-sub4: #{variables.$cl_sub4};
+  --rgb-sub1: #{variables.$rgb_sub1};
+}
+
+// ベーススタイル
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+//    line-height: 1.75;
+  color: var(--color-sub1);
+  background-color: var(--color-main);
+  @media (min-width: variables.$pc_min_width) {
+      font-size: 2.4rem;
+  }
+}
+
+
+a {
+  color: var(--color-sub3);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+article h1 {
+  display: block;
+  border-bottom: var(--color-accent) 2px solid;
+  padding: 0 4rem; // 装飾用
+  margin: 0 0 4rem; // 下は各小コンテナとのマージン
+  max-width: variables.$pc_width_for_main;
+
+  position: relative;
+
+  @media (min-width: variables.$pc_min_width) {
+      margin: 0 0 6rem; // 下は各小コンテナとのマージン
+      padding: 0 6rem; // 装飾用
+  }
+
+  &::after {
+      content: attr(data-serif-jp);
+      font-family: 'Noto Serif JP', serif;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1.2rem;
+      font-size: 1.2rem;
+      background-color: var(--color-accent);
+      color: var(--color-main);
+      line-height: 1;
+      text-align: center;
+      margin: 0 4rem; // 装飾用 本体要素の横パディングに合わせると文字幅と同じになる
+     
+  }
+
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.serif-en {
+  font-family: 'Corben', cursive;
+}
+.serif-jp {
+  font-family: 'Noto Serif JP', serif;
+}
+
+main {
+  @media (min-width: variables.$pc_min_width) {
+      margin-left: variables.$pc_width_for_sidebar;
+      width: calc(100% - #{variables.$pc_width_for_sidebar});
+  }
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 4rem 0 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @media (min-width: variables.$pc_min_width) {
+      margin: 5rem auto 4rem;
+  }
+}

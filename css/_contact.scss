@@ -1,3 +1,4 @@
+@use "variables";
 //
 // Contact
 //
@@ -31,7 +32,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         margin: 33vh 0 auto;
         background-color: var(--color-main);
         width: 540px;
@@ -48,7 +49,7 @@
     font-size: 1.6rem;
     line-height: 1.75;
     width: 100%;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         margin: 0 0 10px;
         border-bottom: 1px var(--color-sub1) solid;
     }
@@ -62,13 +63,13 @@
 .linefeed-for-sp::before {
     content: "\A";
     white-space: pre;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         display: none;
     }
 }
 
 .profile-photo {
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         margin: 2rem 0 0;
     }
 
@@ -80,7 +81,7 @@
 }
 
 .name-block {
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         margin: 2rem 0 0;
     }
 }
@@ -88,7 +89,7 @@
 .name__jp {
     font-size: 3.6rem;
     width: 100%;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         color: var(--color-sub1);
     }
 
@@ -96,14 +97,14 @@
 .name__en {
     margin-top: 1.6rem;
     font-size: 2rem;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         color: var(--color-sub1);
     }
 }
 .name__email {
     font-size: 1.3rem;
     display: none;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         display: block;
     }
 }
@@ -115,7 +116,7 @@
     display: flex;
     width: 60vw;
     justify-content: space-between;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         margin: 0 auto auto;
         width: 540px; // 名刺に合わせる
         justify-content: flex-end;
@@ -129,7 +130,7 @@
         border-radius: 50%;
         background-color: var(--color-main);
         margin: 0;
-        @media (min-width: $pc_min_width) {
+        @media (min-width: variables.$pc_min_width) {
             margin-left: 2.4rem;
         }
         a {
