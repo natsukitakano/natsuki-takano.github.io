@@ -1,3 +1,4 @@
+@use "variables";
 //
 // Works
 //
@@ -8,8 +9,8 @@
     width: calc(100% - 2rem * 2);
     line-height: 1.2;
 
-    @media (min-width: $pc_min_width) {
-        max-width: $pc_width_for_main;
+    @media (min-width: variables.$pc_min_width) {
+        max-width: variables.$pc_width_for_main;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
@@ -22,7 +23,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         width: calc((100% - 2rem) / 2);
         margin: 2rem 0 2rem;
     }
@@ -38,7 +39,7 @@
     position: relative;
     cursor: pointer;
 
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         font-size: 2.4rem;
         line-height: 4rem;
         cursor: unset;
@@ -106,7 +107,7 @@
         transition: padding .3s, line-height .3s, opacity .2s;
         opacity: 0;
     }
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         display: block;
     }
 }

@@ -1,3 +1,4 @@
+@use "variables";
 //
 // Samples
 //
@@ -7,15 +8,15 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    @media (min-width: $pc_min_width) {
-        max-width: $pc_width_for_main;
-        margin: 0 $horizontal_margin_for_flex_elements 0;
+    @media (min-width: variables.$pc_min_width) {
+        max-width: variables.$pc_width_for_main;
+        margin: 0 variables.$horizontal_margin_for_flex_elements 0;
     }
 }
 
 .sample {
     margin: 2rem 0 0;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -23,7 +24,7 @@
 }
 
 .sample__thumnails {
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         width: calc((100% - 2rem) / 2 );
     }
     img {
@@ -32,7 +33,7 @@
     }
 }
 .sample__description {
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         width: calc((100% - 2rem) / 2 );
     }
 }
@@ -40,8 +41,8 @@
     font-size: 1.6rem;
     font-weight: 900;
     line-height: 2;
-    border-bottom: $cl-orange 1px solid;
-    @media (min-width: $pc_min_width) {
+    border-bottom: variables.$cl-orange 1px solid;
+    @media (min-width: variables.$pc_min_width) {
         font-size: 2.4rem;
     }
 
@@ -55,7 +56,7 @@
     text-indent: -1rem;
     margin: 0;
 
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         font-size: 1.6rem;
     }
 

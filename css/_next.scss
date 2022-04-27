@@ -1,9 +1,10 @@
+@use "variables";
 //
 // Next..
 //
 
-$sp_next_width: 20rem;
-$pc_next_width: 25rem;
+variables.$sp_next_width: 20rem;
+variables.$pc_next_width: 25rem;
 
 .container-nexts {
     margin: 0 2rem 0;
@@ -11,8 +12,8 @@ $pc_next_width: 25rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    @media (min-width: $pc_min_width) {
-        max-width: $pc_width_for_main;
+    @media (min-width: variables.$pc_min_width) {
+        max-width: variables.$pc_width_for_main;
         margin: 0;
     }
 }
@@ -22,18 +23,18 @@ $pc_next_width: 25rem;
 
     margin: 2rem 0 0;
 
-    width: $sp_next_width;
+    width: variables.$sp_next_width;
     box-sizing: border-box;
 
    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 1px 1px 3px 0px rgba($cl-navy, 0.5);
+    box-shadow: 1px 1px 3px 0px rgba(variables.$cl-navy, 0.5);
 
     opacity: 1;
     transition: .5s opacity, .5s transform;
 
-    @media (min-width: $pc_min_width) {
-        width: $pc_next_width;
-        margin: #{$horizontal_margin_for_flex_elements};
+    @media (min-width: variables.$pc_min_width) {
+        width: variables.$pc_next_width;
+        margin: #{variables.$horizontal_margin_for_flex_elements};
 
     }
 
@@ -71,7 +72,7 @@ $pc_next_width: 25rem;
     color: var(--color-accent);
     font-size: 2.4rem;
     line-height: 3;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         font-size: 3.6rem;
         line-height: 2;
     }
@@ -84,7 +85,7 @@ $pc_next_width: 25rem;
 
 .next__text {
     font-size: 1.6rem;
-    @media (min-width: $pc_min_width) {
+    @media (min-width: variables.$pc_min_width) {
         font-size: 2rem;
         line-height: 1.75;
     }

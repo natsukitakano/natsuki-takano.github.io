@@ -2,6 +2,16 @@
 @charset 'UTF-8';
 // sassライブラリ
 @use "sass:math";
+// Scssファイルの読み込み
+@use "variables";
+@use "common";
+@use "header";
+@use "contact";
+@use "about";
+@use "works";
+@use "samples";
+@use "next";
+@use "footer";
 
 /*  Google Fontsの読み込み
     Noto Sans JP: 本文用
@@ -9,17 +19,6 @@
 	Noto Serif JP: 日本語見出し用
 	Klee One: NEXT..用メモ
  */
-@import url('https://fonts.googleapis.com/css2?family=Corben&family=Klee+One&family=Noto+Serif+JP:wght@200;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 
-// Scssファイルの読み込み
-@import "base";
-@import "header";
-@import "contact";
-@import "about";
-@import "works";
-@import "samples";
-@import "next";
-@import "footer";
 
